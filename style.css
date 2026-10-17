@@ -1,0 +1,404 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Patrick+Hand&family=Playfair+Display:ital,wght@0,700;1,700&display=swap');
+
+* {
+    box-sizing: border-box
+}
+
+html {
+    scroll-behavior: smooth
+}
+
+body {
+    margin: 0;
+    color: #303038;
+    background: #fff8ed;
+    font-family: 'DM Sans', Arial, sans-serif
+}
+
+button {
+    font: inherit
+}
+
+.topbar {
+    position: fixed;
+    z-index: 20;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px max(16px, calc((100vw - 700px)/2));
+    background: #fff9f0e8;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 1px 12px #00000010
+}
+
+.topbar span {
+    font-family: georgia, cursive;
+    font-size: 22px
+}
+
+.topbar button {
+    border: 1px solid #e5b7b6;
+    background: white;
+    border-radius: 30px;
+    padding: 9px 13px;
+    font-size: 13px;
+    cursor: pointer
+}
+
+.notebook {
+    position: relative;
+    width: min(100%, 560px);
+    padding: 60px 34px 42px;
+    background: repeating-linear-gradient(to bottom, #fffdf6 0px, #fffdf6 32px, #bad0e0 33px, #fffdf6 34px);
+    box-shadow: 6px 12px 30px #715a4a30;
+    transform: rotate(-2deg);
+    clip-path: polygon(0 1%, 8% 0, 16% 1%, 25% 0, 35% 1%, 44% 0, 55% 1%, 66% 0, 77% 1%, 88% 0, 100% 1%, 100% 99%, 90% 100%, 80% 99%, 70% 100%, 60% 99%, 50% 100%, 40% 99%, 30% 100%, 20% 99%, 10% 100%, 0 99%)
+}
+
+.notebook:before {
+    content: '';
+    position: absolute;
+    left: 24px;
+    top: 0;
+    bottom: 0;
+    border-left: 2px solid #e7a7ae
+}
+
+.intro p {
+    max-width: 390px;
+    margin: 15px auto;
+    line-height: 1.9
+}
+
+.intro h1 {
+    font-size: clamp(32px, 10vw, 50px)
+}
+
+.scrollhint {
+    margin-top: 35px
+}
+
+.intro {
+    min-height: 95svh
+}
+.intro {
+    min-height: 80svh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 110px 25px 70px;
+    background: radial-gradient(circle at 20% 24%, #ffd5e0 0 10%, transparent 35%), radial-gradient(circle at 85% 65%, #f8d9a5 0 9%, transparent 38%), #fff9eb
+}
+
+.eyebrow {
+    font-family: georgia;
+    font-size: 19px;
+    letter-spacing: 2px
+}
+
+.intro h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(36px, 11vw, 64px);
+    line-height: 1.08;
+    max-width: 640px;
+    margin: 24px 0
+}
+
+.intro em {
+    color: #d36e91
+}
+
+.intro p {
+    max-width: 320px;
+    line-height: 1.7
+}
+
+
+.scrollhint {
+    margin-top: 65px;
+    font-family: georgia;
+    font-size: 19px
+}
+
+.season {
+    position: relative;
+    overflow: hidden;
+    padding: 100px 16px 110px;
+    isolation: isolate
+}
+
+.season:before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    opacity: .65;
+    background-image: radial-gradient(#ffffff88 1px, transparent 1px);
+    background-size: 17px 17px
+}
+
+.season.spring {
+    background: linear-gradient(155deg, #fce2e7, #f7f6d6 55%, #d9eedb)
+}
+
+.season.summer {
+    background: linear-gradient(180deg, #7cc8f3 0%, #c8ebff 36%, #fff1bf 78%, #f8dca7)
+}
+
+.season.autumn {
+    background: linear-gradient(155deg, #f7dfb7, #dca16c 55%, #a96449)
+}
+
+.season.winter {
+    background: linear-gradient(160deg, #c4d9e6, #edf5f8 50%, #b6c5dc)
+}
+
+.season:after {
+    position: absolute;
+    z-index: -1;
+    top: 35px;
+    right: -20px;
+    font-size: clamp(95px, 22vw, 180px);
+    opacity: .42;
+    transform: rotate(-16deg)
+}
+
+.spring:after {
+    content: '🌸'
+}
+
+.summer:after {
+    content: '☀️'
+}
+
+.autumn:after {
+    content: '🍂'
+}
+
+.winter:after {
+    content: '❄️'
+}
+
+.season-head {
+    text-align: center;
+    max-width: 550px;
+    margin: 0 auto 60px
+}
+
+.season-head .tag {
+    font-family: georgia;
+    font-size: 22px;
+    letter-spacing: 2px
+}
+
+.season-head h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(48px, 12vw, 76px);
+    margin: 8px 0 12px
+}
+
+.season-head p {
+    font-family: georgia;
+    font-size: 23px;
+    margin: 0
+}
+
+.season-head .doodle {
+    font-size: 35px;
+    margin-top: 16px
+}
+
+.photos {
+    width: min(100%, 620px);
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 12px;
+    row-gap: 50px;
+    align-items: start
+}
+
+.polaroid {
+    margin: 0;
+    min-width: 0;
+    background: #fffdf7;
+    padding: 10px 10px 17px;
+    box-shadow: 0 8px 17px #352d2c30;
+    transform: rotate(var(--rotate));
+    position: relative;
+    transition: transform .3s;
+    opacity: 0;
+    translate: 0 35px
+}
+
+.polaroid.visible {
+    animation: appear .6s ease-out forwards
+}
+
+.polaroid:nth-child(4n+2) {
+    margin-top: 48px
+}
+
+.polaroid:nth-child(5n+3) {
+    margin-top: -22px
+}
+
+.polaroid:hover {
+    transform: rotate(0deg) scale(1.035);
+    z-index: 4
+}
+
+.polaroid img {
+    display: block;
+    width: 100%;
+    aspect-ratio: var(--ratio);
+    object-fit: cover;
+    background: linear-gradient(145deg, #fff6f5, #d7e5eb);
+    font-size: 12px
+}
+
+.polaroid figcaption {
+    text-align: center;
+    padding-top: 12px;
+    font-family: georgia, cursive;
+    font-size: clamp(14px, 3.7vw, 21px);
+    color: #494046
+}
+
+.polaroid .tape {
+    position: absolute;
+    width: 66px;
+    height: 24px;
+    top: -12px;
+    left: calc(50% - 33px);
+    background: #f5b3bfaa;
+    transform: rotate(-6deg);
+    clip-path: polygon(3% 5%, 100% 0, 96% 100%, 0 94%)
+}
+
+.polaroid:nth-child(3n) .tape {
+    background: #9bb7d2b8
+}
+
+.polaroid:nth-child(4n) .tape {
+    background: #e5ce94b8
+}
+
+.captions {
+    position: absolute;
+    z-index: 3;
+    font-size: 29px;
+    bottom: -20px;
+    right: -9px;
+    transform: rotate(15deg)
+}
+
+.quote {
+    grid-column: 1/-1;
+    max-width: 430px;
+    margin: 0 auto 10px;
+    text-align: center;
+    padding: 18px 24px;
+    background: #fffdf2e6;
+    box-shadow: 2px 5px 0 #00000010;
+    transform: rotate(-2deg);
+    font: clamp(20px, 5vw, 28px) georgia, cursive
+}
+
+.season-counter {
+    text-align: center;
+    margin: 80px auto 0;
+    font: 20px georgia;
+    opacity: .75
+}
+
+footer {
+    text-align: center;
+    padding: 100px 24px;
+    background: #fff2e9;
+     padding: 0;
+}
+
+
+.footer-image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+footer .heart {
+    font-size: 70px;
+    color: #d56d8c
+}
+
+footer h2 {
+    font: clamp(30px, 7vw, 52px) 'Playfair Display';
+    margin: 0
+}
+
+footer p {
+    font-family: georgia;
+    font-size: 22px;
+     padding: 25px;
+}
+
+@keyframes appear {
+    to {
+        opacity: 1;
+        translate: 0 0
+    }
+}
+
+@media(min-width:750px) {
+    .season {
+        padding: 120px 30px
+    }
+
+    .photos {
+        gap: 70px 42px
+    }
+
+    .polaroid {
+        padding: 15px 15px 22px
+    }
+
+    .polaroid figcaption {
+        font-size: 21px
+    }
+}
+
+@media(max-width:370px) {
+    .photos {
+        gap: 35px 9px
+    }
+
+    .polaroid {
+        padding: 7px 7px 12px
+    }
+
+    .polaroid figcaption {
+        font-size: 14px
+    }
+
+    .season {
+        padding-left: 11px;
+        padding-right: 11px
+    }
+}
+
+@media(prefers-reduced-motion:reduce) {
+    .polaroid {
+        opacity: 1;
+        translate: none;
+        animation: none !important
+    }
+
+    html {
+        scroll-behavior: auto
+    }
+}
